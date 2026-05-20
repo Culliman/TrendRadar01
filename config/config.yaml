@@ -161,9 +161,9 @@ storage:
 # 8. AI 模型配置 【已填好你的通义千问 qwen-max】
 # ===============================================================
 ai:
-  model: "openai/qwen-max"
-  api_key: "sk-7349e82364ca47df9f0c4693de6578db"
-  api_base: "https://dashscope.aliyuncs.com/compatible-mode/v1"
+  model: ""
+  api_key: ""
+  api_base: ""
   timeout: 120
   temperature: 0.8
   max_tokens: 5000
@@ -175,7 +175,7 @@ ai:
 # 9. AI 分析功能（开启，精准分拣检察+AI资讯）
 # ===============================================================
 ai_analysis:
-  enabled: true
+  enabled: false
   language: "Chinese"
   prompt_file: "ai_analysis_prompt.txt"
   mode: "follow_report"
