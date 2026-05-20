@@ -3,9 +3,7 @@
 #                      Version: 2.2.0
 # ═══════════════════════════════════════════════════════════════
 
-
 # 可视化配置编辑器地址: https://sansan0.github.io/TrendRadar/
-
 
 # ===============================================================
 # 1. 基础设置
@@ -14,14 +12,12 @@ app:
   timezone: "Asia/Shanghai"
   show_version_update: false
 
-
 # ===============================================================
 # 1.5 调度系统
 # ===============================================================
 schedule:
   enabled: false
   preset: "morning_evening"
-
 
 # ===============================================================
 # 2. 数据源 - 只保留政务/权威新闻源，剔除娱乐热搜
@@ -38,7 +34,6 @@ platforms:
     - id: "cls-hot"
       name: "财联社热门"
 
-
 # ===============================================================
 # 3. RSS 全部关闭，不需要杂资讯
 # ===============================================================
@@ -48,7 +43,6 @@ rss:
     enabled: true
     max_age_days: 1
   feeds: []
-
 
 # ===============================================================
 # 4. 报告模式：增量推送，无重复
@@ -60,14 +54,12 @@ report:
   rank_threshold: 5
   max_news_per_keyword: 6
 
-
 # ===============================================================
 # 4.5 筛选策略：关键词优先 + AI精准复核
 # ===============================================================
 filter:
   method: "keyword"
   priority_sort_enabled: true
-
 
 # ===============================================================
 # 4.6 AI 智能筛选配置
@@ -77,7 +69,6 @@ ai_filter:
   batch_interval: 2
   min_score: 0.65
   reclassify_threshold: 0.6
-
 
 # ===============================================================
 # 5. 推送内容控制（精简界面）
@@ -96,7 +87,6 @@ display:
     platforms: []
     rss_feeds: []
     max_items: 20
-
 
 # ===============================================================
 # 6. 推送通知（钉钉留空，走GitHub Secrets）
@@ -132,7 +122,6 @@ notification:
       webhook_url: ""
       payload_template: ""
 
-
 # ===============================================================
 # 7. 存储配置
 # ===============================================================
@@ -156,12 +145,10 @@ storage:
     enabled: false
     days: 7
 
-
 # ===============================================================
-# 8. AI 模型配置 【已填好你的通义千问 qwen-max】
+# 8. AI 模型配置 【DeepSeek 正确配置】
 # ===============================================================
 ai:
-   # DeepSeek v1 官方配置
   model: "deepseek/deepseek-chat"
   api_key: "sk-439a6125181b4cfdb4d6835fbafb1f80"
   api_base: "https://api.deepseek.com/v1"
@@ -171,20 +158,18 @@ ai:
   num_retries: 1
   fallback_models: []
 
-
 # ===============================================================
-# 9. AI 分析功能（开启，精准分拣检察+AI资讯）
+# 9. AI 分析功能（已修正错误）
 # ===============================================================
 ai_analysis:
   enabled: true
   language: "Chinese"
-  prompt_file: "ai_analtrueysis_prompt.txt"
+  prompt_file: "ai_analysis_prompt.txt"
   mode: "follow_report"
   max_news_for_analysis: 120
   include_rss: false
   include_standalone: false
   include_rank_timeline: false
-
 
 # ===============================================================
 # 10. AI 翻译关闭，无需翻译
@@ -197,7 +182,6 @@ ai_translation:
     hotlist: false
     rss: false
     standalone: false
-
 
 # ===============================================================
 # 11. 高级设置
@@ -220,7 +204,7 @@ advanced:
     rank: 0.6
     frequency: 0.3
     hotness: 0.1
-  max_accounts_per_channel: 3
+  max_account_per_channel: 3
   batch_size:
     default: 4000
     dingtalk: 20000
