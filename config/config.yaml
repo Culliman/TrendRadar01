@@ -161,9 +161,10 @@ storage:
 # 8. AI 模型配置 【已填好你的通义千问 qwen-max】
 # ===============================================================
 ai:
-  model: ""
-  api_key: ""
-  api_base: ""
+   # DeepSeek v1 官方配置
+  model: "deepseek/deepseek-chat"
+  api_key: "sk-439a6125181b4cfdb4d6835fbafb1f80"
+  api_base: "https://api.deepseek.com/v1"
   timeout: 120
   temperature: 0.8
   max_tokens: 5000
@@ -175,9 +176,9 @@ ai:
 # 9. AI 分析功能（开启，精准分拣检察+AI资讯）
 # ===============================================================
 ai_analysis:
-  enabled: false
+  enabled: true
   language: "Chinese"
-  prompt_file: "ai_analysis_prompt.txt"
+  prompt_file: "ai_analtrueysis_prompt.txt"
   mode: "follow_report"
   max_news_for_analysis: 120
   include_rss: false
